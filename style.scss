@@ -1,0 +1,332 @@
+// Colors
+
+$sunny: #FFCD41;
+$clear: #73d2de;
+$night: #273D53;
+$cloudy-light: #999;
+$cloudy-dark: #444;
+
+.sunny {
+  background-color: $sunny;
+}
+.clear {
+  background-color: $clear;
+}
+.night {
+  background-color: $night;
+}
+.cloudy-dark {
+  background-color: $cloudy-dark;
+}
+.cloudy-light {
+  background-color: $cloudy-light;
+}
+
+/* Global */
+
+* {
+  box-sizing: border-box;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  height: 300px;
+  width: 690px;
+}
+
+.row {
+  display: flex;
+}
+
+.search-wrapper {
+  padding: 50px;
+}
+
+#search {
+  width: 600px;
+  font-size: 24pt;
+  padding-left: 20px;
+}
+
+// Sizing
+
+.small {
+  transform: scale(0.5);
+}
+
+// Cloud
+
+.cloud {
+	width: 175px;
+	height: 60px;
+	background: #f2f9fe;
+	background: linear-gradient(top,  #f2f9fe 5%,#d6f0fd 100%);
+	position: relative;
+	// margin: 120px auto 20px;
+	border-radius: 50px;
+}
+
+.cloud:after, div.cloud:before {
+	content: '';
+	position: absolute;
+	z-indeX: 1;
+	background: #f2f9fe;
+}
+
+.cloud:after {
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	top: -25px;
+	left: 25px;
+}
+
+.cloud:before {
+	width: 90px;
+	height: 90px;
+	border-radius: 100px;
+	top: -45px;
+	right: 25px;
+}
+
+// Sun
+
+.sun { 
+  width: 50px;
+  height: 50px;
+  background: $sun; 
+  border-radius: 50%; 
+  box-shadow: rgba(255,255,0,0.1) 0 0 0 4px;
+  animation: light 800ms ease-in-out infinite alternate;
+}
+
+@keyframes light {
+  from {
+      box-shadow: rgba(255,255,0,0.2) 0 0 0 10px;
+  }
+  to {
+      box-shadow: rgba(255,255,0,0.2) 0 0 0 17px;
+  }
+}
+
+// Rain
+
+.rain {
+  position : absolute;
+  height : 80%;
+  width : 100%;
+  color: #002266;
+  .drop {
+    background : linear-gradient(#002266, #ffffff);
+  }
+  .d1 {
+    left : 97%;
+    animation : fall .94s linear 0.69s infinite;
+  }
+  
+  .d2 {
+    left : 18%;
+    animation : fall .98s linear 0.57s infinite;
+  }
+  .d3 {
+    left : 38%;
+    animation : fall .66s linear .60s infinite;
+  }
+  
+  .d4 {
+    left : 64%;
+    animation : fall .69s linear .76s infinite;
+  }
+  
+  .d5 {
+    left : 95%;
+    animation : fall .75s linear .56s infinite;
+  }
+  
+  .d6 {
+    left : 65%;
+    animation : fall .75s linear .92s infinite;
+  }
+  
+  .d7 {
+    left : 19%;
+    animation : fall .92s linear .72s infinite;
+  }
+  
+  .d8 {
+    left : 55%;
+    animation : fall .84s linear .99s infinite;
+  }
+  
+  .d9 {
+    left : 35%;
+    animation : fall .79s linear .53s infinite;
+  }
+  
+  .d10 {
+    left : 83%;
+    animation : fall .82s linear .97s infinite;
+  }
+  
+  .d11 {
+    left : 8%;
+    animation : fall .75s linear .56s infinite;
+  }
+  
+  .d12 {
+    left : 1%;
+    animation : fall .60s linear .59s infinite;
+  }
+  
+  .d13 {
+    left : 13%;
+    animation : fall .5s linear .5s infinite;
+  }
+  
+  .d14 {
+    left : 13%;
+    animation : fall .80s linear .63s infinite;
+  }
+  
+  .d15 {
+    left : 13%;
+    animation : fall .68s linear .75s infinite;
+  }
+}
+
+.drop {
+  position : absolute;
+  
+  opacity : 2;
+  top : 25px;
+  width : 1.5%;
+  height : 7%;
+}
+
+
+@keyframes fall {
+	to {margin-top:150px; opacity:0;}
+}
+
+// Wind
+
+@keyframes wind {
+  0% {margin-left: 0; opacity:0;}
+  50% {opacity:1;}
+  100% {margin-left: calc(100% - 175px); opacity: 0;}
+}
+
+.wind {
+  animation: wind 4s linear infinite;
+}
+
+.wind-wrapper {
+  // overflow: hidden;
+  width: 500px;
+}
+
+// Snow
+
+.snow {
+  position : absolute;
+  height : 80%;
+  width : 100%;
+  color: #ffffff;
+  .drop {
+    background : linear-gradient(#aaa, #ffffff);
+  }
+  .d1 {
+    left : 97%;
+    animation : fall .94s linear 0.69s infinite;
+  }
+  
+  .d2 {
+    left : 18%;
+    animation : fall 1.98s linear .57s infinite;
+  }
+  .d3 {
+    left : 38%;
+    animation : fall 1.66s linear .60s infinite;
+  }
+  
+  .d4 {
+    left : 64%;
+    animation : fall 1.69s linear .76s infinite;
+  }
+  
+  .d5 {
+    left : 95%;
+    animation : fall 1.75s linear .56s infinite;
+  }
+  
+  .d6 {
+    left : 65%;
+    animation : fall 1.75s linear .92s infinite;
+  }
+  
+  .d7 {
+    left : 19%;
+    animation : fall 1.92s linear .72s infinite;
+  }
+  
+  .d8 {
+    left : 55%;
+    animation : fall 1.84s linear .99s infinite;
+  }
+  
+  .d9 {
+    left : 35%;
+    animation : fall 1.79s linear .53s infinite;
+  }
+  
+  .d10 {
+    left : 83%;
+    animation : fall 1.82s linear .97s infinite;
+  }
+  
+  .d11 {
+    left : 8%;
+    animation : fall 1.75s linear .56s infinite;
+  }
+  
+  .d12 {
+    left : 1%;
+    animation : fall 1.60s linear .59s infinite;
+  }
+  
+  .d13 {
+    left : 13%;
+    animation : fall 1.5s linear .5s infinite;
+  }
+  
+  .d14 {
+    left : 13%;
+    animation : fall 1.80s linear .63s infinite;
+  }
+  
+  .d15 {
+    left : 13%;
+    animation : fall 1.68s linear .75s infinite;
+  }
+}
+
+// Moon 
+
+.moon {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 10px 0px 0px #fff; 
+}
