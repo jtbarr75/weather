@@ -3,8 +3,9 @@
 $sunny: #FFCD41;
 $clear: #73d2de;
 $night: #273D53;
-$cloudy-light: #999;
-$cloudy-dark: #444;
+$cloudy-light: #ccc;
+$cloudy-dark: #999;
+$sandy: #FDD387;
 
 .sunny {
   background-color: $sunny;
@@ -20,6 +21,9 @@ $cloudy-dark: #444;
 }
 .cloudy-light {
   background-color: $cloudy-light;
+}
+.sandy {
+  background-color: $sandy;
 }
 
 /* Global */
@@ -38,6 +42,7 @@ $cloudy-dark: #444;
 .background {
   width: 100vw;
   height: 100vh;
+  transition: background-color 0.5s;
 }
 
 .container {
@@ -47,6 +52,8 @@ $cloudy-dark: #444;
 
 .row {
   display: flex;
+  width: 600px;
+  justify-content: space-evenly;
 }
 
 .search-wrapper {
@@ -103,9 +110,9 @@ $cloudy-dark: #444;
 // Sun
 
 .sun { 
-  width: 50px;
-  height: 50px;
-  background: $sun; 
+  width: 75px;
+  height: 75px;
+  background: $sunny; 
   border-radius: 50%; 
   box-shadow: rgba(255,255,0,0.1) 0 0 0 4px;
   animation: light 800ms ease-in-out infinite alternate;
@@ -128,7 +135,8 @@ $cloudy-dark: #444;
   width : 100%;
   color: #002266;
   .drop {
-    background : linear-gradient(#002266, #ffffff);
+    // background : linear-gradient(#fff, #002266);
+    background-color: #002266;
   }
   .d1 {
     left : 97%;
@@ -207,11 +215,11 @@ $cloudy-dark: #444;
 
 .drop {
   position : absolute;
-  
+  border-radius: 50%;
   opacity : 2;
   top : 25px;
-  width : 1.5%;
-  height : 7%;
+  width : 2%;
+  height : 12%;
 }
 
 
